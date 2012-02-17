@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Oeis::VERSION
   s.authors     = ["Jordan Scales"]
   s.email       = ["scalesjordan@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/prezjordan/oeis"
   s.summary     = %q{On-Line Encyclopedia of Integer Sequences gem}
   s.description = %q{Allows you to fetch results from OEIS using a list of integers}
 

@@ -25,7 +25,7 @@ input.
     cd oeis
     bundle
     gem build oeis.gemspec
-    gem install oeis-0.0.1
+    gem install oeis-XXXXX (where XXXXX denotes the version)
     
 **OR**
 
