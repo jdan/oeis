@@ -9,8 +9,8 @@ input.
 ## Usage
 
     > require 'oeis'
-    > l = 3.upto(10).collect { |i| i*i }
-    > result = OEIS::Search(l)
+    > ls = 3.upto(10).collect { |i| i*i }
+    > result = OEIS::search(ls)
     
     > p result.title
     The squares: a(n) = n^2.
@@ -25,7 +25,7 @@ input.
     cd oeis
     bundle
     gem build oeis.gemspec
-    gem install oeis-XXXXX (where XXXXX denotes the version)
+    gem install oeis-X.X.X.gem
     
 **OR**
 
