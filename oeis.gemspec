@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Jordan Scales"]
   s.email       = ["scalesjordan@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{On-Line Encyclopedia of Integer Sequences gem}
+  s.description = %q{Allows you to fetch results from OEIS using a list of integers}
 
   s.rubyforge_project = "oeis"
 
@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_development_dependency "nokogiri"
+  s.add_runtime_dependency "nokogiri"
 end
