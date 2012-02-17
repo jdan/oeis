@@ -12,10 +12,19 @@ module OEIS
     
     def initialize(ls)
       url = BASE_URL + ls.join(',')
-      doc = Nokogiri::HTML(open(url))
+      begin
+        doc = Nokogiri::HTML(open(url))
+      rescue SocketError
+        puts 'Connection could not be established. Check your internet connection.'
+      end
       
       first_result = doc.css('table table:eq(2)').first
       info = first_result.css('tr:eq(3) table > tr > td > a').first
+      
+      if info.nil?
+        puts 'No sequence found.'
+        return nil
+      end
       
       @id = info.attributes['href'].value[1..-1]
       @title = info.attributes['title'].value
