@@ -10,6 +10,7 @@ input.
 
     > require 'oeis'
     > ls = 3.upto(10).collect { |i| i*i }
+    [9, 16, 25, 36, 49, 64, 81, 100] 
     > result = OEIS::search(ls)
     
     > p result.title
