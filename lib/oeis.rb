@@ -24,6 +24,10 @@ module OEIS
       @sequence = digits.map { |a| a.to_i }
     end
     
+    def to_s
+      "#{@id}: #{@title}"
+    end
+    
   end
   
   def self.Search(l)
