@@ -4,7 +4,7 @@ require "oeis/version"
 
 Gem::Specification.new do |s|
   s.name        = "oeis"
-  s.version     = Oeis::VERSION
+  s.version     = OEIS::VERSION
   s.authors     = ["Jordan Scales"]
   s.email       = ["scalesjordan@gmail.com"]
   s.homepage    = "http://github.com/prezjordan/oeis"
