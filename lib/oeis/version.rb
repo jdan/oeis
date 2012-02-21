@@ -1,3 +1,3 @@
-module Oeis
+module OEIS
   VERSION = "0.0.3"
 end

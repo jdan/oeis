@@ -41,3 +41,7 @@ not-so-right.
 Numbers have always been a passion of mine, so this servers as a simple educational tool.
 Generating numbers is fun, seeing various properties of the numbers you just generated is
 even cooler.
+
+## LICENSE
+
+Include license information here.
