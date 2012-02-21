@@ -3,8 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 
 module OEIS
-  # Your code goes here...
-  class OEISParser
+  class Parser
 
     BASE_URL = 'http://oeis.org/search?q='
 
@@ -40,6 +39,6 @@ module OEIS
   end
 
   def self.search(ls)
-    OEISParser.new(ls)
+    OEIS::Parser.new(ls)
   end
 end
