@@ -11,11 +11,7 @@ module OEIS
 
     def initialize(ls)
       url = BASE_URL + ls.join(',')
-      begin
-        doc = Nokogiri::HTML(open(url))
-      rescue SocketError
-        puts 'Connection could not be established. Check your internet connection.'
-      end
+      doc = Nokogiri::HTML(open(url))
 
       first_result = doc.css('table table:eq(2)').first
       info = first_result.css('tr:eq(3) table > tr > td > a').first
