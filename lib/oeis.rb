@@ -14,15 +14,15 @@ module OEIS
       doc = Nokogiri::HTML(open(url))
 
       first_result = doc.css('table table:eq(2)').first
-      info = first_result.css('tr:eq(3) table > tr > td > a').first
+      info = first_result.css('tr:eq(3) table > tr').first
 
       if info.nil?
         puts 'No sequence found.'
         return nil
       end
 
-      @id = info.attributes['href'].value[1..-1]
-      @title = info.attributes['title'].value
+      @id = info.css('td:eq(1) > a').text.strip
+      @title = info.css('td:eq(3)').text.strip
 
       digits = first_result.css('tr:eq(4) table tr tt').text.split(', ')
       @sequence = digits.map &:to_i
